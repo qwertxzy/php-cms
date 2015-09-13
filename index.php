@@ -16,6 +16,7 @@
 					<div class='card'>
 						<h1>" . $posts['posts'][$index]['title'] . "</h1>
 						<p>" . $posts['posts'][$index]['content'] . "</p>
+						<p>". $posts['posts'][$index]['date'] . "</p>
 					</div>
 				");
 			}

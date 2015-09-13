@@ -1,0 +1,10 @@
+credentials
+	testuser
+	psswd
+
+todo:
+
+make neat css
+put ckeditor into footer
+???
+profit

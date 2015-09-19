@@ -1,12 +1,11 @@
 <?php
-$username = null;
 $password = null;
+$config = json_decode(file_get_contents('./config.json'), true);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if(!empty($_POST["username"]) && !empty($_POST["password"])) {
-        $username = $_POST["username"];
+    if(!empty(!empty($_POST["password"])) {
         $password = $_POST["password"];
-		if($username == 'testuser' && $password == 'psswd') {
+		if($password == $config['credentials']['password']) {
             session_start();
             $_SESSION["authenticated"] = 'true';
             header('Location: admin.php');
@@ -24,13 +23,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html>
 	<head>
 		<title>shitty cms admin page</title>
-		<link rel="stylesheet" href="shitty_cms_style.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
 	</head>
 	
 	<body>
 		<form id="login" method="post">
-			<label for="username">Username</label>
-			<input id="username" name="username" type="text" required>
 			<label for="password">Password</label>
 			<input id="password" name="password" type="password" required>                    
             <br />

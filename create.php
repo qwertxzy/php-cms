@@ -5,7 +5,20 @@
 			$json_output = json_encode($posts);
 			$json_file = fopen('data.json', 'w');
 			fwrite($json_file, $json_output);
+<<<<<<< HEAD
 			
 			header("Location: admin.php");
 			exit;
 		?>
+=======
+		?>
+		
+		<h1>Your Post has been added.</h1>
+		<a href="admin.php">Go back to the Administration Page</a>
+		
+		<footer>
+			<p class="left text">Made by <a class="no-link" href="http://www.twitter.com/qwertxzy">qwertxzy</a></p>
+		</footer>
+	</body>
+</html>
+>>>>>>> origin/master

@@ -3,7 +3,7 @@ $password = null;
 $config = json_decode(file_get_contents('./config.json'), true);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if(!empty(!empty($_POST["password"])) {
+    if(!empty($_POST["password"])) {
         $password = $_POST["password"];
 		if($password == $config['credentials']['password']) {
             session_start();

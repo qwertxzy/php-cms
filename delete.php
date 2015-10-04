@@ -16,6 +16,7 @@
 					');
 				}
 			}
+			header("Location: admin.php");
 		?>
 	<body>
 		<footer>

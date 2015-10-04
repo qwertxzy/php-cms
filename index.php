@@ -33,31 +33,12 @@
 					");
 				}
 			
-<<<<<<< HEAD
 				for ($i = count($posts['posts']) - 1; $i >= 0; $i--) {
 					displayPost($i);
 				}
 			?>
 		</div>
-		
-=======
-			//display post at index
-			function displayPost ($index) {		
-				global $posts;
-				print("
-					<div class='card'>
-						<h1>" . $posts['posts'][$index]['title'] . "</h1>
-						<p>" . $posts['posts'][$index]['content'] . "</p>
-						<p>". $posts['posts'][$index]['date'] . "</p>
-					</div>
-				");
-			}
-			
-			for ($i = count($posts['posts']) - 1; $i >= 0; $i--) {
-				displayPost($i);
-			}
-		?>
->>>>>>> origin/master
+
 		<footer>
 			<div class="container">
 				<span class="grey-text">Made by qwertxzy. CSS made by Noahz.</span>
